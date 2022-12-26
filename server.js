@@ -24,7 +24,7 @@ mongoose.connect(connection_url ,{
 //API Endpoints
 app.get('/', (req, res)=> res.status(200).send("hello world!"));
 
-app.post('/tinder/card', (req, res)=> {
+ app.post('/tinder/card', (req, res)=> {
     const dbCard = req.body;
     Cards.create(dbCard, (err, data)=>{
         if(err){
